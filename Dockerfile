@@ -1,20 +1,17 @@
-# Usar uma imagem base do Node
-FROM node:22
+# Usa a imagem oficial do Nginx como base
+FROM nginx:alpine
 
-# Criar diretório da aplicação dentro do container
-WORKDIR /GIT
+# Remove o conteúdo padrão do Nginx
+RUN rm -rf /usr/share/nginx/html/*
 
-# Copiar os arquivos de dependência
-COPY index.html .
+# Copia os arquivos do site para a pasta padrão do Nginx
+COPY . /usr/share/nginx/html
 
-# Instalar dependências
-RUN npm install
+# Copia uma configuração personalizada do nginx (opcional)
+# COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copiar o resto do projeto
-COPY . .
+# Expõe a porta padrão do Nginx
+EXPOSE 80
 
-# Expõe a porta usada pelo app
-EXPOSE 3000
-
-# Comando para rodar o app
-CMD ["npm", "start"]
+# Comando padrão para iniciar o Nginx no modo foreground
+CMD ["nginx", "-g", "daemon off;"]
