@@ -21,8 +21,8 @@ h1, h2, h3, h4, h5, h6 {
     <a href="#home" class="w3-bar-item w3-button">Nosso Cardapio Gourmet</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#Sobre" class="w3-bar-item w3-button">Sobe Nós</a>
-      <a href="#Pedidos" class="w3-bar-item w3-button">Pedidos</a>
+      <a href="#sobre" class="w3-bar-item w3-button">Sobre Nós</a>
+      <a href="#pedidos" class="w3-bar-item w3-button">Pedidos</a>
       <a href="#menu" class="w3-bar-item w3-button">Menu</a>
       <a href="#contato" class="w3-bar-item w3-button">Contato</a>
     </div>
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 <div class="w3-content" style="max-width:1100px">
 
   <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="Sobre">
+  <div class="w3-row w3-padding-64" id="sobre">
     <div class="w3-col m6 w3-padding-large w3-hide-small">
      <img src="tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
     </div>
@@ -49,12 +49,121 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-col m6 w3-padding-large">
       <h1 class="w3-center">Sobre a Empresa</h1><br>
       <h5 class="w3-center">Tradição desde 2007</h5>
-      <p class="w3-large">O Restaurante foi fundado em 2025 por Fábio Fernandes <span class="w3-tag w3-light-grey">Sazonal</span> Ingredientes.</p>
+      <p class="w3-large">O Restaurante foi fundado em 2025 por Fábio Fernandes <span class="w3-tag w3-light-grey">Criador de Sistemas</span> Git/Docker.</p>
       <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
   
   <hr>
+  <!-- Menu Pedidos -->
+  <div class="w3-row w3-padding-64" id="pedidos">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <meta charset="UTF-8">
+      <title>Tela de Pedidos</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 20px;
+        }
+        h1 {
+          color: #333;
+        }
+        .pedido-container {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          max-width: 600px;
+          margin: 0 auto;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+          display: block;
+          margin-top: 10px;
+          font-weight: bold;
+        }
+        input, select, button {
+          width: 100%;
+          padding: 10px;
+          margin-top: 5px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+        table {
+          width: 100%;
+          margin-top: 20px;
+          border-collapse: collapse;
+        }
+        th, td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: left;
+        }
+        th {
+          background-color: #eee;
+        }
+        button {
+          background-color: #28a745;
+          color: white;
+          border: none;
+          margin-top: 20px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #218838;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <div class="pedido-container">
+        <h1>Fazer Pedido</h1>
+        <form>
+          <label for="nome">Nome do Cliente:</label>
+          <input type="text" id="nome" name="nome" required>
+    
+          <label for="produto">Produto:</label>
+          <select id="produto" name="produto" required>
+            <option value="">Selecione</option>
+            <option value="pizza">Pizza</option>
+            <option value="hamburguer">Hambúrguer</option>
+            <option value="sushi">Sushi</option>
+          </select>
+    
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" required>
+    
+          <button type="submit">Adicionar ao Pedido</button>
+        </form>
+    
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pizza</td>
+              <td>2</td>
+              <td><button style="background-color: #dc3545;">Remover</button></td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <button>Finalizar Pedido</button>
+      </div>
+    
+
+
+     </div>
+    </div>
+
+
+
   
   <!-- Menu Section -->
   <div class="w3-row w3-padding-64" id="menu">
