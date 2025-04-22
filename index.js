@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         // Mantém o nome após reset
         form.reset();
+        
         nomeInput.value = nome;
       }
     });
